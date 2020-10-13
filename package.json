@@ -36,5 +36,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullah-fahad/ode-in-arabic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdullah-fahad/ode-in-arabic/issues"
+  },
+  "homepage": "https://github.com/abdullah-fahad/ode-in-arabic#readme",
   "description": ""
 }
