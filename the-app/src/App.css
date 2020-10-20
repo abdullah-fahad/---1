@@ -73,6 +73,7 @@ body{
   display: inline-block;
 }
 .textarea{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 500px;
   height: 200px;
   background-color: rgb(0, 63, 63);

@@ -1,11 +1,8 @@
 module.exports = {
-  apps : [{
-    script: 'index.js',
+  apps : {
+    script: 'server',
     watch: '.'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
-  }],
+  },
 
   deploy : {
     production : {
