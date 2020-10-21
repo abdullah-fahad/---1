@@ -1,5 +1,16 @@
-const source = {
-    arabic_code: ["ا","ب","ت","ث","متغير","ثابت","محلي","إذا","إلا","حلقة","طالما","أخرج-للطرفية"],
-    javaScript_code: ["a","b","c","d","var","const","let","if","else", "for", "while", "console.log"]
+const sequelize = require("sequelize");
+
+const source = (sequelize, DataTypes) => {
+    const Source = sequelize.define('source', {
+        arabic_code: {
+            type: DataTypes.STRING,
+            unique: true
+        },
+        javaScript_code:{
+            type: DataTypes.STRING,
+            unique: true
+        }
+    })
+    return Source;
 }
 export default source;

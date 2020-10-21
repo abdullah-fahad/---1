@@ -1,15 +1,17 @@
-import source from '../models/source';
+import Source from '../models/index';
 
 export const tran = async(req, res) => {
     const {code} = req.body;
     try{
         const codeArray = code.split(' ');
+        
         let tranz = '';
         for (var x = 0; x<codeArray.length; x++){
-            if(codeArray[x]!==source.arabic_code[x]){
+            let tranzilation = await Source.findOne({where: {arabic_code: codeArray[x]}});
+            if(!tranzilation){
              tranz = `${tranz + codeArray[x]}`
         }  else{
-            tranz = `${tranz + source.javaScript_code[x]} `;
+            tranz = `${tranz + tranzilation.javaScript_code} `;
         }
         };
         res.status(200).json({message:tranz});
